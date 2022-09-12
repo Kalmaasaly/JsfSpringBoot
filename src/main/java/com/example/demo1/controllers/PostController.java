@@ -10,8 +10,6 @@ import javax.annotation.ManagedBean;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.RequestScoped;
 import java.io.Serializable;
-
-
 //@ManagedBean(value = "post")
 @RequestScoped
 public class PostController implements Serializable {
