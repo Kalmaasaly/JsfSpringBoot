@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+
+</h:head>
+<h:body>
+<h:form>
+    <p:panelGrid columns="2" layout="grid" columnClasses="ui-grid-col-2,ui-grid-col-8">
+        <h:outputLabel value="title" />
+        <p:inputText value="#{postController.post.title}"/>
+        <h:outputLabel value="content" />
+        <p:inputTextarea value="#{postController.post.content}"/>
+        <h:outputLabel value="published" />
+        <p:selectBooleanCheckbox value="#{postController.post.published}"/>
+        <f:facet name="footer">
+            <p:commandButton actionListener="#{postController.addPost()}"/>
+        </f:facet>
+    </p:panelGrid>
+</h:form>
+</h:body>
+</html>
